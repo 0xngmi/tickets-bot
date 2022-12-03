@@ -16,7 +16,7 @@ client.login(DISCORD_TOKEN);
 
 const buttons = [
   ["Update project info", "update"],
-  ["Report TVL error", "data-error"],
+  ["Report TVL error", "tvl-error"],
   ["Report APY error", "apy-error"],
   ["API issue", "api"],
   ["Other", "other"],
