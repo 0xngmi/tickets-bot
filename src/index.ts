@@ -7,7 +7,7 @@ const client = new Discord.Client({ intents: [GatewayIntentBits.GuildMessages] }
 client.on("ready", async () => {
   console.log("Starting");
   // No reason why we need to make this request but bot doesnt work otherwise
-  const channelCheck = await client.channels.fetch("1048639746794082357") as TextChannel;
+  const channelCheck = await client.channels.fetch("1048679179283075183") as TextChannel;
 });
 
 client.on("error", e => { console.error("Discord client error!", e); });
@@ -31,7 +31,7 @@ const rows = buttons.map(([label, id]) => new ActionRowBuilder<ButtonBuilder>()
 );
 
 client.on("messageCreate", async (message: Message) => {
-  if (message.content !== "<@1048644295646793788> gib") return
+  if (message.content !== "<@1048644295646793788> gib" || message.author.id !== "819992865525727273") return
   await message.channel.send({ content: 'If you have a question you can create a ticket using the buttons below.', components: rows });
 });
 
